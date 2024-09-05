@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>雜談 - Version 2024-09</title>
+      <link href="/2024/09/05/2024090501/"/>
+      <url>/2024/09/05/2024090501/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1><p>沉寂了很久,不僅僅是我一直持續地去做物理治療企圖改善我困擾許久的坐骨神經痛,更大的理由是生活陷於平靜,沒有弄新東西的衝動</p><span id="more"></span><p>驚覺感覺自己越來越像退休後無所事事的老年人,昨天還是開始沒事找事的開始測試一些其實用不上的東西…</p><h1 id="結論"><a class="markdownIt-Anchor" href="#結論"></a> 結論</h1><p>馬上就來結論,結論就是測試搞了一天沒有任何有效益的成果,於是我全數砍掉了…,不過還是大概講一下相關的心得吧</p><h1 id="研究內容"><a class="markdownIt-Anchor" href="#研究內容"></a> 研究(!?)內容</h1><p>主要的測試部分都是跟影音有關的Service</p><h2 id="小雅alist"><a class="markdownIt-Anchor" href="#小雅alist"></a> 小雅Alist</h2><p><a href="https://www.youtube.com/watch?v=L5AbBdMBo8k" title="小雅Alist"><img src="http://img.youtube.com/vi/L5AbBdMBo8k/0.jpg" alt="小雅Alist" /></a></p><p>我承認,我看到介紹後我心動了,然後我就想弄起來…<br />但是我在第一步的第一步 - 創建阿里雲盤帳號 這點就夭折了…因為我沒有中國電話門號…<br />所以只能想像我自己應該是可以弄得起來的…</p><h2 id="tubearchivist"><a class="markdownIt-Anchor" href="#tubearchivist"></a> TubeArchivist</h2><p><a href="https://www.tubearchivist.com/">TubeArchivist</a>是一個Off-line的Youtube收集器,基本功能就是可以訂閱youtube chanel後把該chanel內的影片全數載下來,變成離線可以觀看…</p><p>然而它還可以合併提供檔案給<code>emby</code>/<code>plex</code>/<code>jellyfin</code>當作庫藏影片播放</p><h2 id="tubearchivist-plugin-for-metadata"><a class="markdownIt-Anchor" href="#tubearchivist-plugin-for-metadata"></a> TubeArchivist-Plugin for metadata</h2><p>雖然Tubearchivist抓下來的已經是影片檔,但是檔名是依Youtube ID建立的,根本不是給人看得metadata<br />所以就會有人開發把youtube metadata弄下來轉到<code>emby/jellyfin</code>上讓人看到的是正確的東西的Plugin</p><h3 id="tubearchivist-emby"><a class="markdownIt-Anchor" href="#tubearchivist-emby"></a> <a href="https://github.com/xinmans/tubearchivist-emby">TubeArchivist-emby</a></h3><p>因為<code>emby</code>沒有做成plugin的形式,所以得外掛一個Python的service去轉,基本上我弄了一個早上都沒成功,我又不想去debug python code…所以就打上放棄的印章</p><h3 id="tubearchivist-jf-plugin"><a class="markdownIt-Anchor" href="#tubearchivist-jf-plugin"></a> <a href="https://github.com/tubearchivist/tubearchivist-jf-plugin">TubeArchivist-JF-Plugin</a></h3><p>為了可以動,我還去裝了<code>jellyfin</code>結果很成功…眉角就是</p><ul><li><p>安裝好Pligin後要記得重開機Jellyfin不然plugin不會啟動</p></li><li><p>設定好Plugin後存檔完後記得也要重開機Jellyfin不然連線會一直失敗…沒辦法更新meta</p></li></ul><h2 id="iptv"><a class="markdownIt-Anchor" href="#iptv"></a> IPTV</h2><h3 id="jellyfin"><a class="markdownIt-Anchor" href="#jellyfin"></a> Jellyfin</h3><p>因為<code>Emby</code>的電視直播功能需要付費解鎖…所以我就剛好因為TubeArchivist的關係把主意打在Jellyfin頭上</p><p>結論上來說,在我好不容易搞定IPTV一堆前置設定(嚴格說起來也不算搞定,因為最終我的節目表還是有問題)<br />最後還是不能撥放…(同樣的連結我用<code>VLC</code>, 甚至Emby的IPTV Plugin都可以撥放電視節目<br />但是Jellyfin就是error不能撥…所以我也放棄了…連同弄好的TA一起消滅</p><h3 id="xetve"><a class="markdownIt-Anchor" href="#xetve"></a> Xetve</h3><p>這是一個IPTV用的Tuner跟Guide聚合工具,不過我到最後還是沒搞懂…</p><h4 id="相關網頁"><a class="markdownIt-Anchor" href="#相關網頁"></a> 相關網頁</h4><ul><li><a href="https://iptv-org.github.io/">IPTV-org</a></li><li><a href="https://xmltv.host/">XMLTV Source</a></li><li><a href="https://epg.pw/xmltv.html?lang=zh-hant">EPG.PW</a></li></ul><h3 id="emby"><a class="markdownIt-Anchor" href="#emby"></a> Emby</h3><p>雖說電視直播是要錢的,但是有個免錢的<code>IPTV</code> plugin可安裝,基本上把iptv-org裡有效的m3u link一個一個的建入也是可以看得…不過頻寬可能不夠,加上畫質慘不忍睹的只有480p…所以還是放棄比較實在…</p><h1 id="結論-again"><a class="markdownIt-Anchor" href="#結論-again"></a> 結論 Again…</h1><p>雖然失敗了…不過好歹也花了時間…後面再看看還有什麼可以鑽研一下…</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Life </tag>
+            
+            <tag> Linux </tag>
+            
+            <tag> Docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>雜談 - Version 2024-03</title>
       <link href="/2024/03/28/2024032801/"/>
       <url>/2024/03/28/2024032801/</url>

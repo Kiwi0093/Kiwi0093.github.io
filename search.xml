@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>小說..沒有閒書可以看會死的...</title>
+      <link href="/2025/04/08/2025040801/"/>
+      <url>/2025/04/08/2025040801/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>沒有小說,就跟沒漫畫可以看一樣,是會死人的…..</p><span id="more"></span><h1 id="日輕"><a href="#日輕" class="headerlink" title="日輕"></a>日輕</h1><p>本來我都去<a href="https://mobinovels.com/">魔筆小說</a>去搜刮站長放上去的日輕電子書,但是後來因為站長有了千金不小心把站搞沒了,所以有段時間我就沒更新我自己的書庫…<br>直到前一陣子我發現了一個好東西</p><h2 id="Tampermonkey-Greasy-Fork-轻小说文库下载"><a href="#Tampermonkey-Greasy-Fork-轻小说文库下载" class="headerlink" title="Tampermonkey - Greasy Fork - 轻小说文库下载"></a>Tampermonkey - Greasy Fork - 轻小说文库下载</h2><p>這個真的是福音,因為他可以把目前免費藏書量最多的<a href="https://www.wenku8.net/">輕小說文庫</a>裡的小說自動轉換成<code>epub</code>格式並且塞進插圖跟封面後下載下來…</p><img src="https://raw.githubusercontent.com/Kiwi0093/graph/master/img/Screenshot_20250408_160310.png" alt="Wenku8 download" width="1000"><p>注意事項</p><ul><li>使用Brave的同學需要關閉<code>Brave Shields</code>的功能不然script會被停止使用</li><li>想要檔名直接是繁體的同學請先桉<code>CC開啟</code>他會把檔名變成繁體中文</li><li>全部一起下載會把全集數合併成一本讓你下載</li><li>若有圖片下載有問題的他會跳Error不會給你缺圖的<code>epub</code></li></ul><h1 id="中爽文"><a href="#中爽文" class="headerlink" title="中爽文"></a>中爽文</h1><p>中國爽文的話就比較麻煩了, 基本上得去找<code>全書txt</code>下載的網頁下載, 我目前是去<a href="http://www.12z.cn/index.html">免費小說網</a>下載整本的txt檔<br>因為中國爽文動輒幾百萬字所以而且一般都只有文字,所以我也沒要求過封面跟插畫…</p><h2 id="轉檔epub"><a href="#轉檔epub" class="headerlink" title="轉檔epub"></a>轉檔<code>epub</code></h2><p>因為我都是用<code>kindle</code>在看書的,所以我會強制把txt轉成epub後保存起來,加上我現在大多數都在企鵝環境下工作,所以轉換用的程式自然就是企鵝可以用的<br>你說為什麼不用網頁轉檔？主要是中式爽文的文字太多,網路上免費的轉檔網頁轉不了,而我又只想當免費仔..</p><h3 id="txt2epub"><a href="#txt2epub" class="headerlink" title="txt2epub"></a>txt2epub</h3><p><a href="https://github.com/kevinboone/txt2epub">txt2epub github</a> - 有很多個同名的,我選了可以用<code>yay</code>安裝的這個,其他的基本上都是用<code>pip</code>安裝<br>我在<code>Archlinux</code>下直接<code>yay -S txt2epub</code>就好了…</p><p>基本語法</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[Kiwi]#&gt; txt2epub -o &lt;/path/filename.epub&gt; --author &lt;Author Name&gt; --title &lt;book title&gt; --cover-image &lt;filename.jpg&gt; chapter01.txt chapter02.txt chapter03.txt</span><br></pre></td></tr></table></figure><p>注意事項</p><ul><li>這玩意是純粹的CLI command, 想要GUI的請用<code>pip</code>安裝其他python的txt2epub,我有看到<a href="https://github.com/k4yt3x/txt2epub">有GUI的版本</a></li><li>轉換前文字得先確認為<code>unicode</code>不然會出問題</li></ul><h1 id="Update-to-kindle"><a href="#Update-to-kindle" class="headerlink" title="Update to kindle"></a>Update to kindle</h1><p>基本上日輕我都是扔到我的日輕書庫 - <code>Calibre-Web</code>裡利用<code>Calibre-Web</code>內建的功能把書傳送到kindle所以沒什麼問題,但是我卻沒有建立給中式爽文用的Calibre-web(也許以後書多了會放,或是塞進我一般書籍的calibre裡面)<br>不管未來如何現在想要手動塞進kindle的話就靠<br>Amazon官方的<a href="https://www.amazon.com/sendtokindle">send to kindle</a>裡面有web界面的uploader</p><img src="https://raw.githubusercontent.com/Kiwi0093/graph/master/img/Screenshot_20250408_163222.png" alt="send to kindle" width="1000"><p>弄好了就可以用kindle抓下來一路爽了…</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Live </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>買了...但是人的慾念是如此的深不可測..</title>
       <link href="/2025/02/26/2025022601/"/>
       <url>/2025/02/26/2025022601/</url>

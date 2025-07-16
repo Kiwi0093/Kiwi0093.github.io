@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Plasma 6.4..我該怎麼說你</title>
+      <link href="/2025/07/16/2025071601/"/>
+      <url>/2025/07/16/2025071601/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>繼上次我以為的Archlinux暴死事件後,算是又被KDE Plasma擺了一道….</p><span id="more"></span><h1 id="悲劇再び！？"><a href="#悲劇再び！？" class="headerlink" title="悲劇再び！？"></a>悲劇再び！？</h1><p>有個背後靈是渣男的偉人曾說過”人は同じ過ちを繰り返す..まったく..！”<br>是的這次又是一個手賤的<code>yay -Syu --noconfirm</code>加上一堆<code>sync</code>後配合<code>sudo reboot</code><br>然後我的VNC就又連不上了….看了一下,發現我的<code>plasma-x11</code>選項消失了…</p><h1 id="真実はいつも一つ！"><a href="#真実はいつも一つ！" class="headerlink" title="真実はいつも一つ！"></a>真実はいつも一つ！</h1><p>是的,犯人就是KDE Plasma…翻了一堆文章發現plasma 6.4以後開始把x11 session從預設中拿掉了…<br>於是我又開始尋找<code>KDE + Wayland</code>的remote desktop方案…</p><p>結果就在我想換用<code>krdp</code>正為他的性能不滿意的時候…我發現了</p><h2 id="其實可以手動把X11-session裝上唷～～～～"><a href="#其實可以手動把X11-session裝上唷～～～～" class="headerlink" title="其實可以手動把X11 session裝上唷～～～～"></a><code>其實可以手動把X11 session裝上唷～～～～</code></h2><p>所以我毫不猶豫的給機器賞了一記<code>yay -S  plasma-x11-session --noconfirm</code><br>然後問題就<del>解決</del>可以延長到Plasma 7以後再面對</p><h1 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h1><p>雖然說我知道整個社群都在叫著Xorg太舊了,所以要逐步更換成wayland的呼聲..<br>但是目前用起來也的確沒有感覺比<code>vnc</code>高效的remote desktop方案..可能在不遠的未來<br>我就會全數更換成<code>moonlight/sunshine</code>這個方案畢竟目前Linux下的<code>rdp</code>方案目前用起來都很遲緩<br>不如windows的用起來流暢….</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>終於遇到..Archlinux暴死...</title>
       <link href="/2025/06/16/2025061601/"/>
       <url>/2025/06/16/2025061601/</url>

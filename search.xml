@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Unifi Controller又又又因為AUR的Mongodb升級爆掉啦～～～</title>
+      <link href="/2025/12/10/2025121001/"/>
+      <url>/2025/12/10/2025121001/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>最近稍微勤勞的對系統更新一下…然後我的Unifi Controller就在我一記<code>yay -Syu --noconfirm</code>下爆炸了</p><span id="more"></span><h1 id="事故紀錄"><a href="#事故紀錄" class="headerlink" title="事故紀錄"></a>事故紀錄</h1><p>一發<code>yay -Syu --noconfirm</code>然後一路跑完後..Unifi Controller的Web UI就連不上了<br>開始查,發現</p><ul><li><p><code>systemctl status unifi.service</code>結果是active ok的但是<code>netstat -an</code>中沒有Unifi Controller的listen port</p></li><li><p>確認<code>/var/log/unifi/server.log</code>裡確認exit code&#x3D;62</p></li><li><p><code>systemctl status mongodb.service</code>裡發現也是exit code&#x3D;62,查詢後發現是mongodb的版本舊無法正常啟動</p></li><li><p>查詢<code>/var/log/mongodb/mongodb.log</code>確認mongodb的版本是7.0,同時確認AUR內更新的<code>mongodb-bin</code>內的版本是8.2,差異過大所以起不來</p></li><li><p>改裝<code>mongodb80-bin</code>的package後用指令可以把mongodb的主要版本更新到8.0</p></li></ul><p>繞路造成不爽的區塊</p><ul><li><p>Mongodb的資料庫升級概念</p><ul><li><p>Mongodb不能一次跳到後面很多的版本來進行資料庫升級(對Mongodb的執行檔跟資料庫版本不是連動的,他是分開的要手動去更新)</p></li><li><p>從7.0要到8.2得要先7.0 –&gt; 8.0 –&gt; 8.2通成新一版可以相容前一版的資料庫,但是沒辦法新版資料庫相容舊版bin</p></li></ul></li><li><p>爆炸的繞路經歷</p><ul><li><p>先是移除<code>unifi</code>以及<code>mongodb-bin</code>這兩個package,然後換裝<code>mongodb80-bin</code>然後把admin資料庫升級,從7.0 –&gt; 8.0 –&gt;8.2</p></li><li><p>然後又移除<code>mongodb80-bin</code>然後改裝上<code>mongodb-bin</code>跟<code>unifi</code>然後<code>systemctl status mongodb.service</code>看起來正常,但是<code>systemctl status unifi.service</code>看起來也是正常,但是Unifi Controller還是沒起</p><p>來,查詢<code>/var/log/unifi/server.log</code>還是exit code&#x3D;62</p></li><li><p>看來看去還是沒看到如何可以升級unifi的mongodb資料庫（這裡應該是大叔的技能沒點到該點的…所以這裡傻的跟智障一樣）</p></li><li><p>然後就卡在主mongodb admin database 升級OK,但是unifi的mongodb資料庫沒辦法升級….</p></li><li><p>最後去查詢unifi的PKGBUILD檔案,發現… dependence只要是mongodb就好….</p></li><li><p>最終採用<code>mongodb80-bin</code>+<code>unifi</code>這兩個package就因為可以相容7.0的資料庫然後就神奇的好了…..</p></li></ul></li></ul><h1 id="幾個技術學習點"><a href="#幾個技術學習點" class="headerlink" title="幾個技術學習點"></a>幾個技術學習點</h1><p>這個事件最主要的就是學習兩件事情</p><ul><li>Mongodb的概念與升級-還需要再看看怎麼把admin以外的Mongodb資料庫也升級（其實我是連列出資料庫都列不出來）</li><li>Unifi要看一下以後怎麼升級不容易暴雷,之前有試著用docker來跑不過後來因為網路問題沒有採用這個可能需要再挖出來看看</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Plasma 6.4..我該怎麼說你</title>
       <link href="/2025/07/16/2025071601/"/>
       <url>/2025/07/16/2025071601/</url>
